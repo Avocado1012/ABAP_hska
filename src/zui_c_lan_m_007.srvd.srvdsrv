@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service definition for ZC_LAN_M_007'
+define service ZUI_C_LAN_M_007 {
+  expose ZC_LAN_M_007 as LanguageProcessor;
+}

@@ -1,0 +1,23 @@
+managed implementation in class zcl_bp_i_travel_m_007 unique;
+
+define behavior for ZI_LAN_M_007 alias Language
+persistent table zsoftware_007
+lock master
+//authorization master ( instance )
+//etag master <field_name>
+{
+
+  // mandatory
+  field ( mandatory ) language_id, language_name, language_rating, language_description;
+
+  create;
+  update;
+  delete;
+
+  // validations
+  validation validateCustomers on save { field language_id; }
+
+  // determination
+    determination CalculateTravelKey on modify
+    { create; }
+}

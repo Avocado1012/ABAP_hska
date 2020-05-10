@@ -1,0 +1,12 @@
+projection;
+
+define behavior for ZC_LAN_M_007 alias LanguageProcessor
+use etag
+{
+
+  field (mandatory) Id, Description, Rating, Name;
+
+  use create;
+  use update;
+  use delete;
+}
